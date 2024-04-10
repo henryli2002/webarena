@@ -53,7 +53,7 @@ print("Done generating config files with the correct URLs")
 # run bash prepare.sh to save all account cookies, this only needs to be done once
 subprocess.run(["bash", "prepare.sh"])
 print("Done saving account cookies")
-
+    
 # Init an environment
 from browser_env import (
     Action,
@@ -70,7 +70,7 @@ from evaluation_harness.evaluators import evaluator_router
 
 # Init the environment
 env = ScriptBrowserEnv(
-    headless=False,
+    headless=True,
     slow_mo=100,
     observation_type="accessibility_tree",
     current_viewport_only=True,
